@@ -2,24 +2,7 @@
 
 ### Overview
 
-In this repository we show how to deploy MLflow on AWS Fargate and how to use it during your ML project
-with [Amazon SageMaker](https://aws.amazon.com/sagemaker). You will use Amazon SageMaker to develop, train, tune and
-deploy a Scikit-Learn based ML model (Random Forest) and track experiment runs and models with MLflow.
 
-This implementation shows how to do the following:
-
-* Host a serverless MLflow server on AWS Fargate with S3 as artifact store and RDS and backend stores
-* Track experiment runs running on SageMaker with MLflow
-* Register models trained in SageMaker in the MLflow model registry
-* Deploy an MLflow model into a SageMaker endpoint
-
-### MLflow tracking server
-You can set a central MLflow tracking server during your ML project. By using this remote MLflow server, data scientists
-will be able to manage experiments and models in a collaborative manner.
-An MLflow tracking server also has two components for storage: a ```backend store``` and an ```artifact store```. This
-implementation uses an Amazon S3 bucket as artifact store and an Amazon RDS instance for MySQL as backend store.
-
-![](media/architecture-mlflow.png)
 
 ### Prerequisites
 
