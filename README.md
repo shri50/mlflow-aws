@@ -12,11 +12,11 @@ To go through this example, make sure you have the following:
 * An AWS account where the service will be deployed
 * [AWS CDK installed and configured](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html). Make sure to have the credentials and permissions to deploy the stack into your account
 * [Docker](https://www.docker.com) to build and push the MLflow container image to ECR
-* This [Github repository](https://github.com/aws-samples/amazon-sagemaker-mlflow-fargate) cloned into your environment to follow the steps
+
 
 ### Deploying the stack
 
-You can view the CDK stack details in [app.py](https://github.com/aws-samples/amazon-sagemaker-mlflow-fargate/blob/main/app.py).
+You can view the CDK stack details in [app.py].
 Execute the following commands to install CDK and make sure you have the right dependencies:
 
 ```
@@ -44,8 +44,7 @@ RDS. You can then use the load balancer URI present in the stack outputs to acce
 
 **N.B:** In this illustrative example stack, the load balancer is launched on a public subnet and is internet facing.
 For security purposes, you may want to provision an internal load balancer in your VPC private subnets where there is no
-direct connectivity from the outside world. Here is a blog post explaining how to achieve
-this: [Access Private applications on AWS Fargate using Amazon API Gateway PrivateLink](https://aws.amazon.com/blogs/compute/access-private-applications-on-aws-fargate-using-amazon-api-gateway-privatelink/)
+direct connectivity from the outside world. 
 
 ### Managing an ML lifecycle with Amazon SageMaker and MLflow
 
@@ -82,16 +81,6 @@ Follow the step-by-step guide by executing the notebooks in the following folder
 * lab/2_track_experiments_hpo.ipynb
 * lab/3_deploy_model.ipynb
 
-### Current limitation on user access control
-
-The [open source version](https://github.com/mlflow/mlflow) of MLflow does not currently provide user access control
-features in case you have multiple tenants on your MLflow server. This means any user having access to the MLflow server
-can modify experiments, model versions, and stages. This can be a challenge for enterprises in regulated industries that
-need to keep strong model governance for audit purposes.
-
-### Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
 ### License
 
