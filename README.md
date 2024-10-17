@@ -14,7 +14,7 @@ To go through this example, make sure you have the following:
 * [Docker](https://www.docker.com) to build and push the MLflow container image to ECR
 
 
-### Deploying the stack
+### Deploying the stack on cloud
 
 You can view the CDK stack details in [app.py].
 Execute the following commands to install CDK and make sure you have the right dependencies:
